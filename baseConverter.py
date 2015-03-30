@@ -24,6 +24,15 @@ def baseXtoY(source,inputBaseSymbols,outputBaseSymbols):
              outputBaseSymbols )
 
 
+# default symbols sequence 
+# listing symbols by extending hex symbols sequence, base 1 to base 36
+default_symbols_seq = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+d = [ x for x in default_symbols_seq ]
+
+def convertBase(inputNum, frm, to):
+    return baseXtoY(inputNum, d[:frm], d[:to])
+
+print( convertBase("2310",frm = 10, to =16))
 """
 # Examples
 
